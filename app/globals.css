@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #F5F5F5;
+  --color-accent: #10B981;
+  --color-muted: #9CA3AF;
+  --color-border: #E5E7EB;
+  --radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-3 rounded-lg font-medium transition-all duration-200 cursor-pointer disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-black text-white hover:bg-gray-900 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-200 text-black hover:bg-gray-300;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-black border border-gray-200 hover:bg-gray-50;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-white hover:bg-emerald-700;
+  }
+
+  .card {
+    @apply rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+}
